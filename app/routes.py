@@ -72,7 +72,7 @@ def login():
 def get_users():
     users = User.query.all()
     users_json = [
-        {'id': user.id, 'nombre': user.nombre, 'correo': user.correo, 'password': user.contrasena}
+        {'id': user.id, 'nombre': user.nombre, 'correo': user.correo, 'password': user.password}
         for user in users
     ]
     return jsonify(users_json)
